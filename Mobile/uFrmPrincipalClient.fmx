@@ -1,0 +1,201 @@
+object frmPrincipalClient: TfrmPrincipalClient
+  Left = 0
+  Top = 0
+  Caption = 'Client DataSnap - Anderson'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lb1: TLabel
+    Position.X = 24.000000000000000000
+    Position.Y = 32.000000000000000000
+    Text = 'Informe o texto:'
+  end
+  object lbResult: TLabel
+    Position.X = 297.000000000000000000
+    Position.Y = 66.000000000000000000
+    Size.Width = 168.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'lbResult'
+  end
+  object edtNome: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    Position.X = 24.000000000000000000
+    Position.Y = 64.000000000000000000
+    Size.Width = 265.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object swtch1: TSwitch
+    IsChecked = False
+    Position.X = 120.000000000000000000
+    Position.Y = 104.000000000000000000
+    TabOrder = 3
+    OnSwitch = swtch1Switch
+  end
+  object lbEchoString: TLabel
+    Position.X = 208.000000000000000000
+    Position.Y = 109.000000000000000000
+    Text = 'Echo String'
+  end
+  object lbReverseString: TLabel
+    Position.X = 24.000000000000000000
+    Position.Y = 109.000000000000000000
+    Size.Width = 81.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Reverse String'
+  end
+  object sgGrid: TStringGrid
+    Position.X = 16.000000000000000000
+    Position.Y = 200.000000000000000000
+    Size.Width = 609.000000000000000000
+    Size.Height = 257.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    RowCount = 100
+    RowHeight = 21.000000000000000000
+    Viewport.Width = 589.000000000000000000
+    Viewport.Height = 216.000000000000000000
+  end
+  object btnBaixarDados: TSpeedButton
+    Position.X = 528.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Baixar Dados'
+    OnClick = btnBaixarDadosClick
+  end
+  object edt1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 9
+    Position.X = 16.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 505.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object fdmtTabela: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired]
+    UpdateOptions.CheckRequired = False
+    Left = 408
+    Top = 136
+    object fdmtTabelaID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object fdmtTabelaCHAVE: TStringField
+      FieldName = 'CHAVE'
+      Origin = 'CHAVE'
+      Size = 300
+    end
+    object fdmtTabelaIDF_DOCUMENTO: TIntegerField
+      FieldName = 'IDF_DOCUMENTO'
+      Origin = 'IDF_DOCUMENTO'
+      Required = True
+    end
+    object fdmtTabelaDATAEMISSAO: TDateField
+      FieldName = 'DATAEMISSAO'
+      Origin = 'DATAEMISSAO'
+    end
+    object fdmtTabelaDATARECTO: TDateField
+      FieldName = 'DATARECTO'
+      Origin = 'DATARECTO'
+    end
+    object fdmtTabelaMOTIVO: TStringField
+      FieldName = 'MOTIVO'
+      Origin = 'MOTIVO'
+    end
+    object fdmtTabelaPROTOCOLOCANC: TStringField
+      FieldName = 'PROTOCOLOCANC'
+      Origin = 'PROTOCOLOCANC'
+      Size = 50
+    end
+    object fdmtTabelaPROTOCOLORECTO: TStringField
+      FieldName = 'PROTOCOLORECTO'
+      Origin = 'PROTOCOLORECTO'
+      Size = 50
+    end
+    object fdmtTabelaDATAALTERACAO: TDateField
+      FieldName = 'DATAALTERACAO'
+      Origin = 'DATAALTERACAO'
+    end
+    object fdmtTabelaTIPO: TStringField
+      FieldName = 'TIPO'
+      Origin = 'TIPO'
+      FixedChar = True
+      Size = 1
+    end
+    object fdmtTabelaEMAILSNOTIFICADOS: TStringField
+      FieldName = 'EMAILSNOTIFICADOS'
+      Origin = 'EMAILSNOTIFICADOS'
+      Size = 150
+    end
+    object fdmtTabelaTIPOAMBIENTE: TStringField
+      FieldName = 'TIPOAMBIENTE'
+      Origin = 'TIPOAMBIENTE'
+      Size = 30
+    end
+    object fdmtTabelaXMLENVIO: TBlobField
+      FieldName = 'XMLENVIO'
+      Origin = 'XMLENVIO'
+    end
+    object fdmtTabelaXMLEXTEND: TBlobField
+      FieldName = 'XMLEXTEND'
+      Origin = 'XMLEXTEND'
+    end
+    object fdmtTabelaMOTIVOCANC: TStringField
+      FieldName = 'MOTIVOCANC'
+      Origin = 'MOTIVOCANC'
+    end
+    object fdmtTabelaXMLENVIOCANC: TBlobField
+      FieldName = 'XMLENVIOCANC'
+      Origin = 'XMLENVIOCANC'
+    end
+    object fdmtTabelaXMLEXTENDCANC: TBlobField
+      FieldName = 'XMLEXTENDCANC'
+      Origin = 'XMLEXTENDCANC'
+    end
+    object fdmtTabelaPROTOCOLOAUT: TStringField
+      FieldName = 'PROTOCOLOAUT'
+      Origin = 'PROTOCOLOAUT'
+      Size = 50
+    end
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 452
+    Top = 133
+    object lnkgrdtdtsrcbndsrcdb: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = bndsrcdb1
+      GridControl = sgGrid
+      Columns = <>
+    end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = bndsrcdb1
+      FieldName = 'CHAVE'
+      Control = edt1
+      Track = False
+    end
+  end
+  object bndsrcdb1: TBindSourceDB
+    DataSet = fdmtTabela
+    ScopeMappings = <>
+    Left = 360
+    Top = 136
+  end
+end
